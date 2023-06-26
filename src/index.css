@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F3CCFF;
+}
+
+/* navbar */
+
+.navbar__container{
+    @apply flex justify-between items-center p-[3rem] bg-darkPurple
+}
+
+.logo{
+    @apply text-[30px] text-black
+}
+
+.menu{
+    @apply flex gap-8
+}
+
+.menuList{
+    @apply text-black hover:text-lightPurple
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+}
+
+li:hover::before{
+    position: absolute; 
+    content: '';
+    height: 5px;
+    width: 100%;
+    right: 0;
+    bottom: -10px;
+    background: #F3CCFF;
+    color: #A555EC;
+}
+
+/* search */
+
+.searchDiv{
+    @apply grid gap-10 bg-[#f1f4f8] rounded-[10px] p-[3rem]
+}
+
+.firstDiv{
+    @apply flex justify-between items-center rounded-[8px] gap-[10px] p-5 shadow-lg shadow-gray-700
+}
+
+
+
+/* jobs */
+.candidate__container{
+    @apply flex gap-10 justify-center flex-wrap items-center py-10
+}
+
+.singleCandidate{
+    @apply w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-darkPurple shadow-lg 
+}
+
+.company{
+    @apply flex items-center gap-2
+}
+
+
+/* footer */
+.footer{
+    @apply p-[5rem] bg-darkPurple rounded-[10px] gap-8 grid grid-cols-5 m-auto items-center justify-center
+}
+
+.logoFooter{
+    @apply text-[25px] text-white pb-[1.5rem]
+}
+
+.divTitle{
+    @apply text-[18px] font-semibold pb-[1.5rem] text-white
+}
